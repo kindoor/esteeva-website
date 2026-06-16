@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esteeva</title>
+  <meta name="description" content="Esteeva — [short company description goes here]." />
+
+  <!-- Open Graph (link previews on social / messaging) -->
+  <meta property="og:title" content="Esteeva" />
+  <meta property="og:description" content="Esteeva — [short company description goes here]." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esteeva.com" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>E</text></svg>" />
+
+  <style>
+    :root {
+      --brand: #1a3a5c;        /* primary brand color — edit to taste */
+      --brand-light: #2d5d8f;
+      --accent: #c9a14a;        /* accent / highlight */
+      --ink: #1c2430;
+      --muted: #5b6776;
+      --bg: #ffffff;
+      --bg-alt: #f5f7fa;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eaecef;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-weight: 800; letter-spacing: 0.5px; font-size: 22px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .nav-links a:hover { color: var(--brand); }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+      color: #fff;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+    .hero p { font-size: clamp(17px, 2.5vw, 21px); max-width: 640px; margin: 0 auto 36px; opacity: 0.92; }
+    .btn {
+      display: inline-block; background: var(--accent); color: #1c2430;
+      padding: 14px 32px; border-radius: 8px; text-decoration: none;
+      font-weight: 700; font-size: 16px; transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-alt { background: var(--bg-alt); }
+    h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; margin-bottom: 16px; text-align: center; color: var(--brand); }
+    .lead { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 48px; font-size: 18px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .card {
+      background: var(--bg); border: 1px solid #eaecef; border-radius: 12px;
+      padding: 32px 28px; transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover { box-shadow: 0 12px 32px rgba(26,58,92,0.1); transform: translateY(-4px); }
+    .card .icon { font-size: 32px; margin-bottom: 14px; }
+    .card h3 { font-size: 20px; margin-bottom: 10px; color: var(--ink); }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact a.email {
+      display: inline-block; margin-top: 12px; font-size: 22px; font-weight: 700;
+      color: var(--brand); text-decoration: none;
+    }
+    .contact a.email:hover { color: var(--accent); }
+
+    /* Footer */
+    footer { background: var(--ink); color: #aeb8c4; text-align: center; padding: 32px 0; font-size: 14px; }
+    footer a { color: #d6dde5; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#" class="logo">ESTEEVA</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Welcome to Esteeva</h1>
+      <p><span>"The real danger is not that computers will begin to think like men, but that men will begin to think like computers"</span><br><span align="right">-Sydney Harris (Journalist)</span></p>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <h2>About us</h2>
+      <p class="lead">Esteeva — The beginning didn't sound "science", "technology"... But rather "harmony", the essence of true progress. Human advancement is not just about technological or economic growth, but about how well we balance those advancements with social peace, environmental sustainability, and ethical maturity. Yet, progress requires relentless R&D, using disruptive approaches sometimes. Today, Esteeva leverages cutting-edge technologies to design high-performance systems that benefit diverse sectors, such as green energy, institutional governance, banking, education, and social development.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-alt">
+    <div class="wrap">
+      <h2>What we offer</h2>
+      <p class="lead">B2B, B2I... We are present where it matters most.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">&#10024;</div>
+          <h3>Innovation</h3>
+          <p>Change agent, we introduce cutting-edge technologies and modern engineering practices to companies that want to stay competitive. Because we work across different industries, we bring a unique cross-pollination of fresh ideas that internal teams rarely see.</p>
+        </div>
+        <div class="card">
+          <div class="icon">&#9881;&#65039;</div>
+          <h3>Expertise</h3>
+          <p>We solve complex technical and business problems. We analyze existing systems, design architectures, and advise on how to use technology to reach your goals. We bridge the gap between high-level business strategy and technical execution.</p>
+        </div>
+        <div class="card">
+          <div class="icon">&#128640;</div>
+          <h3>Training</h3>
+          <p>Innovation and new technology are useless if the internal team does not know how to maintain them. We provide targeted training to ensure a smooth handoff and long-term project success. They include :<br>
+
+		  - Upskilling on New Tech<br>
+		  - Modern Engineering Practices<br>
+		  - Agile & Workflow Optimization<br>
+		  - Security & Compliance<br>
+		  - Architecture & Design Patterns<br>
+
+		  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Contact</h2>
+      <p class="lead">Have a question or want to work with us? Reach out anytime.</p>
+      <a class="email" href="mailto:contact@esteeva.com">contact@esteeva.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      &copy; <span id="year"></span> Esteeva. All rights reserved. &nbsp;&middot;&nbsp;
+      <a href="mailto:contact@esteeva.com">contact@esteeva.com</a>
+      <div style="margin-top:10px; font-size:13px;">
+        <a href="legal-notice.html">Legal Notice</a> &nbsp;&middot;&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
